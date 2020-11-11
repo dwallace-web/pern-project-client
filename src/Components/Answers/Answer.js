@@ -11,6 +11,7 @@ const Answer = (props) => {
             
             <CreateAnswer />
             <ViewAnswer />
+            <LikesCounter/>
         </div>
     )
 }
