@@ -1,4 +1,17 @@
 .menu {
   background-color: skyblue;
-  
+  display: flex;
+  justify-content: space-between;
+  height: 50px;
+}
+.menu Button {
+  font-weight: bolder;
+  color: white;
+  background-color: black;
+  height: 40px;
+}
+
+#tokenissue {
+  color: red;
+  font-size: 16px;
 }

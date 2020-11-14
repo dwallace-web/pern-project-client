@@ -16,22 +16,30 @@ function App() {
   }, [])
 
   async function reviseToken(newToken) {
-    await localStorage.setItem('token', newToken);
-    await setSessionToken(newToken);
     
-    console.log('view token', localStorage.token)
-    console.log('Session Token ---> ', sessionToken);
+    setSessionToken(newToken);
+
+    console.log('View setSessionToken ---> ', newToken);
+    console.log('View sessionToken ---> ', newToken);
+
+    localStorage.setItem('token', newToken); 
+
+    console.log('View token ---->', localStorage.token)
+    
   }
 
   async function clearToken() {
+    console.log('cleared Session Token ---> ', sessionToken);
+
     await setSessionToken('');
     localStorage.clear();
-    console.log('cleared Session Token ---> ', sessionToken,);
+    
+    console.log('Confirm token is cleared ---->', localStorage.token)
   }
 
   const protectedViews = (props) => {
 
-    return (sessionToken === localStorage.getItem('token') ? <Main token={sessionToken} /> : null )
+    return (sessionToken === localStorage.getItem('token') ? <Main token={sessionToken} /> : <p id="tokenissue">Sign Up or Sign In to View</p>)
 
   }
   

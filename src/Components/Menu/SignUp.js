@@ -9,7 +9,7 @@ export const SignUp = (props) => {
 
     async function signUpUser (event) {
         event.preventDefault();
-        console.log('did it run?')
+        console.log('sign up ran')
 
         await fetch("http://localhost:5000/user/signup", {
             method: 'POST',
@@ -21,6 +21,8 @@ export const SignUp = (props) => {
             .then(response => response.json())
             .then(result => props.reviseToken(result.sessionToken))
             .catch(error => console.log('error', error)); 
+
+        console.log('sign up completed')
     }
 
     return (

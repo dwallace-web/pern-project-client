@@ -9,7 +9,7 @@ export const SignIn = (props) => {
 
     async function signInUser (event) {
         event.preventDefault();
-
+        console.log('testing sign in ')
 
         await fetch("http://localhost:5000/user/signin", {
             method: 'POST',
@@ -21,19 +21,21 @@ export const SignIn = (props) => {
             .then(response => response.json())
             .then(result => props.reviseToken(result.sessionToken))
             .catch(error => console.log('error', error)); 
+
+        console.log('sign in completed')
     }
 
     return (
         <div>
             <h1>Sign In</h1>
             <Form onSubmit={signInUser}>
-                <FormGroup>
-                    <label for="email">Email</label>
-                    <Input type="test" name="email" placeholder="enter email" />
+            <FormGroup>
+                    <label for="username">Username</label>
+                    <Input type="text" name="username" value={username} placeholder="enter username " minLength="4" required onChange={(e) => setUsername(e.target.value)} />
                 </FormGroup>
                 <FormGroup>
                     <label for="password">password</label>
-                    <Input type="password" name="password" placeholder="enter password" />
+                    <Input type="password" name="password" value={password} placeholder="enter password" minLength="8"  required onChange={(e) => setPassword(e.target.value)}/>
                 </FormGroup>
                 <Button type='submit'>Submit</Button>
             </Form>
