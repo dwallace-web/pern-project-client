@@ -9,7 +9,7 @@ const Main = (props) => {
         <div>
             <p>Main</p>
             
-            <Question />
+            <Question token={props.token}  />
             <Answer />
         </div>
     )

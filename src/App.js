@@ -8,6 +8,8 @@ import Main from './Components/Body/Main';
 function App() {
 
   const [sessionToken, setSessionToken] = useState('');
+  const [owner, setOwner ] = useState('');
+  const [userID, setUserId ] = useState('');
 
   useEffect(() => {
     if (localStorage.getItem('token')) {
