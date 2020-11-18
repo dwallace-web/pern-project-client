@@ -42,20 +42,20 @@ const CreateQuestion = (props) => {
                     null
                     :
                     <div>
-                        <h3>CreateQuestion</h3>
+                        <h3>Create Question</h3>
 
                         <Form onSubmit={submitQuestion}>
                             <FormGroup>
                                 <Label for="title"> </Label>
-                                <Input type="text" name="title" id="question-title-entry" placeholder="please enter a question" onChange={(e) => setQuestionTitle(e.target.value)} />
+                                <Input type="text" name="title" id="question-title-entry" required placeholder="please enter a question" onChange={(e) => setQuestionTitle(e.target.value)} />
                             </FormGroup>
                             <FormGroup>
                                 <Label for="category"> </Label>
-                                <Input type="text" name="category" id="question-category-entry" placeholder="please enter a category" onChange={(e) => setQuestionCategory(e.target.value)} />
+                                <Input type="text" name="category" id="question-category-entry" required placeholder="please enter a category" onChange={(e) => setQuestionCategory(e.target.value)} />
                             </FormGroup>
                             <FormGroup>
                                 <Label for="entry"> </Label>
-                                <Input type="textarea" name="entry" id="question-entry-entry" placeholder="please expand on your question" onChange={(e) => setQuestionEntry(e.target.value)} />
+                                <Input type="textarea" name="entry" id="question-entry-entry" required placeholder="please expand on your question" onChange={(e) => setQuestionEntry(e.target.value)} />
                             </FormGroup>
                             <Button>Submit</Button>
                         </Form>

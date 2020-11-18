@@ -1,17 +1,23 @@
 import React, { useState } from 'react';
-import { } from 'reactstrap';
+import { Col, Row, Container } from 'reactstrap';
 import Question from '../Questions/Question';
 import Answer from '../Answers/Answer';
 
 
 const Main = (props) => {
     return (
-        <div>
-            <p>Main</p>
+        <Container>
+
+                <Row>
+                    <Col>
+                        <Question token={props.token} />
+                    </Col>
+                    <Col>
+                        <Answer token={props.token} />
+                    </Col>
+                </Row>
             
-            <Question token={props.token}  />
-            <Answer />
-        </div>
+        </Container>
     )
 }
 
