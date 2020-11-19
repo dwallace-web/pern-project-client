@@ -19,6 +19,7 @@ const Question = (props) => {
         <div>
             <h2>Question</h2>
 
+<<<<<<< HEAD
             {
                 askQuestion === false
 
@@ -35,6 +36,12 @@ const Question = (props) => {
                             <CreateQuestion token={props.token} />
                         </div>
             }
+=======
+            
+
+            <ViewQuestion />
+            <CreateQuestion />
+>>>>>>> nathan
         </div>
     )
 }

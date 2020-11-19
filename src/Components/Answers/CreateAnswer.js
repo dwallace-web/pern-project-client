@@ -40,7 +40,7 @@ const CreateAnswer = (props) => {
  return (
      <div>
          {
-             submittedAnswer === true ?
+             submittedAnswer === true ? null:null
              
          }
         <div>
@@ -50,5 +50,5 @@ const CreateAnswer = (props) => {
     </div>
     )
 
-
+        }
 export default CreateAnswer;
