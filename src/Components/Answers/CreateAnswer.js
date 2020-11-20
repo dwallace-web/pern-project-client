@@ -41,14 +41,15 @@ const CreateAnswer = (props) => {
      <div>
          {
              submittedAnswer === true ?
-             
-         }
-        <div>
-            <h3>CreateAnswer</h3>
+             null
+             :
+            <div>
+                <h3>CreateAnswer</h3>
         
-        </div>
+            </div>
     </div>
-    )
-
+         
+     )
+}
 
 export default CreateAnswer;

@@ -50,7 +50,7 @@ function App() {
     <div className="Container">
       <Menu />
         <Main />
-      <Footer />
+      {/* <Footer /> */}
 
 
       
