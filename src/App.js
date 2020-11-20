@@ -5,7 +5,6 @@ import { Container, Row, Col } from 'reactstrap';
 import Menu from './Components/Menu/Menu.js';
 import Question from './Components/Questions/Question'
 import SignUp from './Components/Menu/SignUp';
-import Main from './Components/Body/Main';
 
 function App() {
 
