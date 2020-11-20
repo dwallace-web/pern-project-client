@@ -1,5 +1,7 @@
 import React, { useState, EFf, useEffect } from 'react';
+import Answer from '../Answers/Answer'  ; 
 import { } from 'reactstrap';
+import QuestionCard from './QuestionCard';
 
 const ViewQuestion = (props) => {
     console.log('VIEWING QUESTIONS ')
@@ -9,7 +11,12 @@ const ViewQuestion = (props) => {
     // console.log('question token -->', props.token)
 
     // const [submittedQuestion, setSubmittedQuestion] = useState(false);
-    
+
+    const [ questionRes, setQuestionRes ] = useState( [ ] );
+    const [ readyToAnswer, setReadyToAnswer ] = useState(false);
+    const [ selectedQuestionId, setSelectedQuestionId ] = useState('');
+
+
     useEffect(() => {
 
         const fetchQuestions = (e) => {
@@ -18,14 +25,21 @@ const ViewQuestion = (props) => {
             fetch("http://localhost:5000/question/", {
                 method: 'GET',
                 headers: new Headers({
-                    // 'Content-Type': 'application/json',
+                    'Content-Type': 'application/json',
                     'Authorization': props.token
                 })
             })
                 .then(response => response.json())
                 .then(result => {
+
+                    setQuestionRes(result);
+
+                    console.log('set question res -->'. questionRes);
+
                     console.log('view questions---->', result)
 
+                    
+                    
                 })
                 .catch(error => console.log('error', error));
         }
@@ -39,6 +53,11 @@ const ViewQuestion = (props) => {
     return (
         <div>
             <h3>View Questions</h3>
+
+            <QuestionCard questionRes={questionRes} />
+            
+
+            {/* <Answer token={props.token} /> */}
         </div>
     )
 }

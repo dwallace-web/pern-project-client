@@ -9,8 +9,8 @@ const Answer = (props) => {
             <h2>Answer </h2>
             <p>We need logic that will 1. show the answers or 2. Create an answer</p>
             
-            <CreateAnswer />
-            <ViewAnswer />
+            <CreateAnswer token={props.token} />
+            <ViewAnswer token={props.token}  />
         </div>
     )
 }

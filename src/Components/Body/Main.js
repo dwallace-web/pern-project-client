@@ -12,9 +12,8 @@ const Main = (props) => {
                     <Col>
                         <Question token={props.token} />
                     </Col>
-                    <Col>
-                        <Answer token={props.token} />
-                    </Col>
+                        
+
                 </Row>
             
         </Container>
