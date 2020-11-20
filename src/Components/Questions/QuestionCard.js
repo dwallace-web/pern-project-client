@@ -15,8 +15,13 @@ const QuestionCard = (props) => {
                     <div key={question.id}>
                         <h2>  {question.title} </h2>
                         <h3>{question.category} </h3>
-                        {question.entry}
+                        <p>{question.entry}
+                        </p>
                         {/* Buttons to edit or delete question but only if the user ID matches */}
+
+                        {/* Function runs to display answers
+                            View Answer or Create Answer
+                        */}
                     </div>
                 )
 

@@ -13,8 +13,7 @@ const ViewQuestion = (props) => {
     // const [submittedQuestion, setSubmittedQuestion] = useState(false);
 
     const [ questionRes, setQuestionRes ] = useState( [ ] );
-    const [ readyToAnswer, setReadyToAnswer ] = useState(false);
-    const [ selectedQuestionId, setSelectedQuestionId ] = useState('');
+
 
 
     useEffect(() => {
