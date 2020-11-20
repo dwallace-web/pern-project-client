@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {Button, Form, Label, Input} from 'reactstrap';
+import {Button, Form, FormGroup, Label, Input} from 'reactstrap';
 
 const CreateAnswer = (props) => {
     console.log('answer token -->', props.token)
@@ -38,17 +38,34 @@ const CreateAnswer = (props) => {
 
 
  return (
-     <div>
-         {
-             submittedAnswer === true ?
-             
-         }
-        <div>
-            <h3>CreateAnswer</h3>
-        
-        </div>
-    </div>
+     <div> 
+          {
+                   
+                submittedAnswer === true ?
+                null
+                :
+
+                <div>
+                    <h3>CreateAnswer</h3>
+                
+
+                <Form onSubmit={submitAnswer}>
+                    <FormGroup>
+                        <Label for="title"> </Label>
+                        <Input type="text" name="title" id="answer-title-entry" required placeholder="Enter answer here." onChange={(e) => setAnswerTitle(e.target.value)} />
+                    </FormGroup>
+                    <Formgroup>
+                        <Label for="entry"></Label>
+                        <Input type="textarea" name="entry" id="answer-entry" required placeholder="Please submit your answer here." onChange={(e) => setAnswerEntry(e.target.value)}/> 
+                    </Formgroup>
+                    <Button>Submit</Button>
+                </Form>
+            </div>
+          }
+    </div>   
+
     )
+}
 
 
 export default CreateAnswer;
