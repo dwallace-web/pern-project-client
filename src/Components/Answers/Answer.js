@@ -35,7 +35,6 @@ const Answer = (props) => {
                         <ViewAnswer token={props.token}/>
                         </div> 
             }
-            
         </div>
     )
 }
