@@ -10,7 +10,7 @@ const CreateAnswer = (props) => {
     const [submittedAnswer, setSubmittedAnswer] = useState(false);
     const [answerLiked, setAnswerLiked] = useState(false);
 
-    const submitQuestion = (e) => {
+    const submitAnswer = (e) => {
         e.preventDefault();
 
         fetch('http://localhost:8080/answer/', {
