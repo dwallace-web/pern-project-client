@@ -21,7 +21,7 @@ const QuestionCard = (props) => {
                         <h2>  {question.title} </h2>
                         <h3>{question.category} </h3>
                         <p>{question.entry} </p>
-                        <CreateAnswer token={props.token} questionid={question.id} /> {/*toggle={toggle} */}
+                        <CreateAnswer token={props.token} questionid={question.id} />
                         <br></br>
                         <ViewAnswer token={props.token} questionid={question.id}  />
                         <br></br>

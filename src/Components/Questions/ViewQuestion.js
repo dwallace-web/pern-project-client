@@ -48,8 +48,6 @@ const ViewQuestion = (props) => {
             <h3 className="current-module">View Questions</h3>
 
             <QuestionCard questionRes={questionRes} token={props.token} />
-
-            {/* <Answer token={props.token} /> */}
         </div>
     )
 }
