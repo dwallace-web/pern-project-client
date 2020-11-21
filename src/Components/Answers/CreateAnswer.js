@@ -5,7 +5,7 @@ const CreateAnswer = (props) => {
     console.log('answer token -->', props.token)
 
     const [answerTitle, setAnswerTitle] = useState('');
-    const [answerLikes, setAnswerLikes] = useState('');
+    const [answerLikes, setAnswerLikes] = useState(0);
     const [answerEntry, setAnswerEntry] = useState('');
     const [submittedAnswer, setSubmittedAnswer] = useState(false);
     const [answerLiked, setAnswerLiked] = useState(false);
@@ -23,7 +23,8 @@ const CreateAnswer = (props) => {
                 "answer": {
                     "title": answerTitle,
                     "entry": answerEntry,
-                    "likes": answerLikes
+                    "likes": answerLikes,
+                    "questionId": props.questionid
                 }
             })
         })
@@ -41,8 +42,6 @@ const CreateAnswer = (props) => {
      <div>
          
         <div>
-            <h3>CreateAnswer</h3>
-
             {
                    
                    submittedAnswer === true ?
@@ -51,7 +50,6 @@ const CreateAnswer = (props) => {
    
                    <div>
                        <h3>CreateAnswer</h3>
-                   
    
                    <Form onSubmit={submitAnswer}>
                        <FormGroup>
