@@ -4,7 +4,7 @@ import { } from 'reactstrap';
 import QuestionCard from './QuestionCard';
 
 const ViewQuestion = (props) => {
-    console.log('VIEWING QUESTIONS ')
+    console.log('VIEWING QUESTIONS', props)
     // fetch to display questions 
     //.map statement to show the question fetched from the object. possible pagiation ?
 
@@ -53,7 +53,7 @@ const ViewQuestion = (props) => {
         <div>
             <h3>View Questions</h3>
 
-            <QuestionCard questionRes={questionRes} />
+            <QuestionCard questionRes={questionRes} token={props.token} />
             
 
             {/* <Answer token={props.token} /> */}
