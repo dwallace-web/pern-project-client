@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
+import DisplayAnswers from './displayAnswers';
 
 const ViewAnswer = (props) => {
 
@@ -39,9 +40,9 @@ const ViewAnswer = (props) => {
                 getAnswers(props);
             }}> View Answers </Button>
             <Modal isOpen={modal} toggle={toggle} className={className}>
-                <ModalHeader toggle={toggle}>Modal title</ModalHeader>
+                <ModalHeader toggle={toggle}>Answers</ModalHeader>
                 <ModalBody>
-
+                    <DisplayAnswers answerResponses={answerResponses} />
                 </ModalBody>
             </Modal>
         </div>
