@@ -8,7 +8,14 @@ const ViewAnswer = (props) => {
     const [modal, setModal] = useState(false);
     const toggle = () => setModal(!modal);
 
-    const [answerResponses, setAnswerResponses] = useState('');
+    const [answerResponses, setAnswerResponses] = useState([]);
+    
+    useEffect(() => {
+        if(answerResponses != []) {
+            setAnswerResponses([]);
+        }
+    }, [])
+
 
     const getAnswers = (props) => {
             // e.preventDefault();
@@ -30,15 +37,16 @@ const ViewAnswer = (props) => {
 
                 })
                 .catch(error => console.log('error', error));
-
-
         }
+    
     return (
         <div>
             <Button class="question-button" onClick={ ()=> {
                 toggle();
                 getAnswers(props);
-            }}> View Answers </Button>
+            }}> 
+            View Answers
+            </Button>
             <Modal isOpen={modal} toggle={toggle} className={className}>
                 <ModalHeader toggle={toggle}>Answers</ModalHeader>
                 <ModalBody>
