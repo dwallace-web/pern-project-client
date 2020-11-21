@@ -6,7 +6,7 @@ import ViewQuestion from '../Questions/ViewQuestion'
 
 const Answer = (props) => {
 
-    Const [answerQuestion, setAnswerQuestion] = useState(false)
+    const [answerQuestion, setAnswerQuestion] = useState(false)
 
     const clickAnswerQuestion = () => {
         setAnswerQuestion(true)

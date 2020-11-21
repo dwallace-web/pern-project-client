@@ -2,7 +2,7 @@ import React, { useState, EFf, useEffect } from 'react';
 import { } from 'reactstrap';
 
 const ViewQuestion = (props) => {
-    console.log('VIEWING QUESTIONS ')
+    console.log('VIEWING QUESTIONS', props)
     // fetch to display questions 
     //.map statement to show the question fetched from the object. possible pagiation ?
 
@@ -31,7 +31,6 @@ const ViewQuestion = (props) => {
         }
     
         fetchQuestions();
-
 
     }, [])
    
