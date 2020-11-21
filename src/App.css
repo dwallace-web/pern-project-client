@@ -2,9 +2,12 @@
   background-color: skyblue;
   display: flex;
   justify-content: space-between;
-  height: 50px;
+  height: 12vh;
+  width: 100vw;
+  margin-bottom: 50px;
 }
 .menu Button {
+  margin: 1vh;
   font-weight: bolder;
   color: white;
   background-color: black;
@@ -24,4 +27,9 @@
 .questioncard .question-button {
   margin: 3rem;
   padding: 3rem;
+}
+.current-module {
+  /* align-content: center;
+  margin: 0 auto; */
+  
 }
