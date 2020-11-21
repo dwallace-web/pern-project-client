@@ -14,8 +14,6 @@ const ViewQuestion = (props) => {
 
     const [ questionRes, setQuestionRes ] = useState( [ ] );
 
-
-
     useEffect(() => {
 
         const fetchQuestions = (e) => {
@@ -34,10 +32,7 @@ const ViewQuestion = (props) => {
                     setQuestionRes(result);
 
                     console.log('set question res -->'. questionRes);
-
                     console.log('view questions---->', result)
-
-                    
                     
                 })
                 .catch(error => console.log('error', error));
@@ -45,16 +40,14 @@ const ViewQuestion = (props) => {
     
         fetchQuestions();
 
-
     }, [])
    
 
     return (
         <div>
-            <h3>View Questions</h3>
+            <h3 className="current-module">View Questions</h3>
 
             <QuestionCard questionRes={questionRes} token={props.token} />
-            
 
             {/* <Answer token={props.token} /> */}
         </div>
