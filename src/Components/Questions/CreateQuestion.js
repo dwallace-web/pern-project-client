@@ -11,7 +11,7 @@ const CreateQuestion = (props) => {
     const submitQuestion = (e) => {
         e.preventDefault();
 
-        fetch("http://localhost:8080/question/", {
+        fetch("http://localhost:5000/question/", {
             method: 'POST',
             headers: new Headers({
                 'Content-Type': 'application/json',

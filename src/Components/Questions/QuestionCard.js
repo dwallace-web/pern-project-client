@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter, Collapse, CardBody, Card } from 'reactstrap';
 import CreateAnswer from '../Answers/CreateAnswer';
+import ViewAnswer from '../Answers/ViewAnswer';
 
 const QuestionCard = (props) => {
 
@@ -20,9 +21,9 @@ const QuestionCard = (props) => {
                         <h2>  {question.title} </h2>
                         <h3>{question.category} </h3>
                         <p>{question.entry} </p>
-                        <CreateAnswer token={props.token} questionid={question.id} /> {/*toggle={toggle} */}
+                        <CreateAnswer token={props.token} questionid={question.id} />
                         <br></br>
-                        <Button class="question-button">View Answers </Button>
+                        <ViewAnswer token={props.token} questionid={question.id}  />
                         <br></br>
                         <br></br>
                         <Button class="question-button">Edit Question</Button>

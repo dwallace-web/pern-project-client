@@ -22,7 +22,7 @@ const CreateAnswer = (props) => {
     const submitAnswer = (e) => {
         e.preventDefault();
         console.log(props.questionid)
-        fetch('http://localhost:8080/answer/', {
+        fetch('http://localhost:5000/answer/', {
             method: 'POST',
             headers: new Headers({
                 'Content-Type': 'application/json',
