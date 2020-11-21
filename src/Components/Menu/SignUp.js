@@ -11,7 +11,7 @@ export const SignUp = (props) => {
         event.preventDefault();
         console.log('sign up ran')
 
-        await fetch("http://localhost:8080/user/signup", {
+        await fetch("http://localhost:5000/user/signup", {
             method: 'POST',
             headers: new Headers({
                 'Content-Type': 'application/json'
