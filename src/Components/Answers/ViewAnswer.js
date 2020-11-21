@@ -38,7 +38,9 @@ const ViewAnswer = (props) => {
             <Button class="question-button" onClick={ ()=> {
                 toggle();
                 getAnswers(props);
-            }}> View Answers </Button>
+            }}> 
+            View Answers
+            </Button>
             <Modal isOpen={modal} toggle={toggle} className={className}>
                 <ModalHeader toggle={toggle}>Answers</ModalHeader>
                 <ModalBody>
