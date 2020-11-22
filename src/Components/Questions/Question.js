@@ -16,10 +16,10 @@ const Question = (props) => {
     }
 
     return (
-        <div>
-            <h2>Question</h2>
-
+        <div className="jumbotron">
+            
             {
+                
                 askQuestion === false
 
                     ?
@@ -31,6 +31,7 @@ const Question = (props) => {
                     :
 
                         <div>
+                        
                             <Button onClick={clickViewQuestions}>Do you want to view the questions? </Button>
                             <CreateQuestion token={props.token} />
                         </div>

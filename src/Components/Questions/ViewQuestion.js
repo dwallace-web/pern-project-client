@@ -45,7 +45,7 @@ const ViewQuestion = (props) => {
 
     return (
         <div>
-            <h3 className="current-module">View Questions</h3>
+            <h3 className="current-module"></h3>
             <QuestionCard questionRes={questionRes} token={props.token} />
         </div>
     )
