@@ -14,6 +14,8 @@ const ViewQuestion = (props) => {
 
     const [ questionRes, setQuestionRes ] = useState( [ ] );
 
+
+
     useEffect(() => {
 
         const fetchQuestions = (e) => {
@@ -32,13 +34,17 @@ const ViewQuestion = (props) => {
                     setQuestionRes(result);
 
                     console.log('set question res -->'. questionRes);
+
                     console.log('view questions---->', result)
+
+                    
                     
                 })
                 .catch(error => console.log('error', error));
         }
     
         fetchQuestions();
+
 
     }, [])
    
