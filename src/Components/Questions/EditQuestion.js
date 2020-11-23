@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from 'react';
 
 import { Button, Form, FormGroup, Label, Input, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
+
+import { Redirect, useHistory } from "react-router-dom";
+
 const EditQuestion = (props) => {
     console.log('edit question token -->', props.token)
     const [questionTitle, setQuestionTitle] = useState('');
@@ -34,9 +37,12 @@ const EditQuestion = (props) => {
     .then(result => {
         console.log(result)
         setEditedQuestion(true);
+        window.location.reload(false);
     })
     .catch(error => console.log('error', error));
 }
+
+
 return (
     <div>
         <Button class="question-button" onClick={toggle}>Edit Question </Button>
