@@ -19,9 +19,14 @@ const QuestionCard = (props) => {
                 return (
 
                     <div key={question.id} className="questioncard">
-                        <h2>  {question.title} </h2>
-                        <h3>{question.category} </h3>
+                        <h5>Title:</h5>
+                        <h7>  {question.title} </h7>
+                        <h5>Category:</h5>
+                        <h7>{question.category} </h7>
+                        <h5>What seems to be the problem?</h5>
                         <p>{question.entry} </p>
+                        <br></br>
+                        <div className="questionButtonMenu">
                         <CreateAnswer token={props.token} questionid={question.id} />
                         <br></br>
                         <ViewAnswer token={props.token} questionid={question.id}  />
