@@ -3,6 +3,7 @@ import { Button, Modal, ModalHeader, ModalBody, ModalFooter, Collapse, CardBody,
 import CreateAnswer from '../Answers/CreateAnswer';
 import ViewAnswer from '../Answers/ViewAnswer';
 import EditQuestion from './EditQuestion';
+import DeleteQuestion from './DeleteQuestion'
 
 const QuestionCard = (props) => {
 
@@ -33,6 +34,7 @@ const QuestionCard = (props) => {
                             <br></br>
                             <br></br>
                             <EditQuestion token={props.token} questionid={question.id} />
+                            <DeleteQuestion token={props.token} questionid={question.id} />
                             {/* <Button class="question-button">Delete Question </Button> */}
                         </div>
                     </div>
