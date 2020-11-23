@@ -27,24 +27,22 @@ const QuestionCard = (props) => {
                         <p>{question.entry} </p>
                         <br></br>
                         <div className="questionButtonMenu">
-                        <CreateAnswer token={props.token} questionid={question.id} />
-                        <br></br>
-                        <ViewAnswer token={props.token} questionid={question.id}  />
-                        <br></br>
-                        <br></br>
-                        <EditQuestion token={props.token} questionid={question.id} />
-                        {/* <Button class="question-button">Delete Question </Button> */}
-
-
-
+                            <CreateAnswer token={props.token} questionid={question.id} />
+                            <br></br>
+                            <ViewAnswer token={props.token} questionid={question.id} />
+                            <br></br>
+                            <br></br>
+                            <EditQuestion token={props.token} questionid={question.id} />
+                            {/* <Button class="question-button">Delete Question </Button> */}
+                        </div>
                     </div>
                 )
 
             }
             )
             }
-        </div>
-    )
-}
+                    </div>
+                )
+            }
 
 export default QuestionCard
