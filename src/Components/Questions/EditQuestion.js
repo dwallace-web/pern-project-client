@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 
 import { Button, Form, FormGroup, Label, Input, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 const EditQuestion = (props) => {
-    console.log('question token -->', props.token)
+    console.log('edit question token -->', props.token)
     const [questionTitle, setQuestionTitle] = useState('');
     const [questionCategory, setQuestionCategory] = useState('');
     const [questionEntry, setQuestionEntry] = useState('');
@@ -14,7 +14,9 @@ const EditQuestion = (props) => {
 
     const submitEditQuestion = (e) => {
     e.preventDefault();
-    fetch("http://localhost:5000/update/:entryId", {
+    console.log(props);
+    console.log('edit question ran', props.questionid)
+    fetch(`http://localhost:5000/question/${props.questionid}`, {
         method: 'PUT',
         heeaders: new Headers({
             'Content-Type': 'application/json',
@@ -53,6 +55,13 @@ return (
                                 <Label for="title"> </Label>
                                 <Input type="text" name="title" id="question-title-entry" required placeholder="placeholder" onChange={(e) => setQuestionTitle(e.target.value)} />
                             </FormGroup>
+                            
+                            <FormGroup>
+                                <Label for="category"> </Label>
+                                <Input type="text" name="category" id="question-category-entry" required placeholder="placeholder" onChange={(e) => setQuestionCategory(e.target.value)} />
+                            </FormGroup>
+
+
                             <FormGroup>
                                 <Label for="entry"></Label>
                                 <Input type="textarea" name="entry" id="question-entry" required placeholder="placeholder" onChange={(e) => setQuestionEntry(e.target.value)} />
