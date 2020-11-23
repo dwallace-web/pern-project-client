@@ -18,7 +18,7 @@ const EditQuestion = (props) => {
     console.log('edit question ran', props.questionid)
     fetch(`http://localhost:5000/question/${props.questionid}`, {
         method: 'PUT',
-        heeaders: new Headers({
+        headers: new Headers({
             'Content-Type': 'application/json',
             'Authorization': props.token
         }),
