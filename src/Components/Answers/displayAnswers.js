@@ -1,5 +1,7 @@
 import React from 'react'
 import { } from 'reactstrap'
+import LikesCounter from '../LikesCounter';
+
 
 export default function displayAnswers(props) {
 
@@ -13,7 +15,7 @@ export default function displayAnswers(props) {
                         <div className="answerbox">
                             <h5 className="user-answer">{answer.title}</h5>
                             <p className="user-answer">{answer.entry}</p>
-                        </div>
+                        </div>    
                     )
                 }
                 )

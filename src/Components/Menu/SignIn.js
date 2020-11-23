@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Form, FormGroup, Input, Button } from 'reactstrap'
-
+import Question from '../Questions/Question';
 
 
 export const SignIn = (props) => {
@@ -21,9 +21,13 @@ export const SignIn = (props) => {
         })
             .then(response => response.json())
             .then(result => props.reviseToken(result.sessionToken))
-            .catch(error => console.log('error', error)); 
+            .catch(error => console.log('error', error))
 
-        console.log('sign in completed')
+        console.log('sign in completed');
+        
+        
+        
+
     }
 
     return (
