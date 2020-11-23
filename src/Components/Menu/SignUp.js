@@ -1,11 +1,13 @@
 import React, { useState } from 'react'
 import { Form, FormGroup, Input, Button } from 'reactstrap'
-
+import { useHistory } from "react-router-dom";
 
 export const SignUp = (props) => {
 
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
+
+    const [userSignUp, setUserSignUp] = useState(false);
 
     async function signUpUser (event) {
         event.preventDefault();
@@ -19,11 +21,23 @@ export const SignUp = (props) => {
             body: JSON.stringify({username : username, password: password }),
         })
             .then(response => response.json())
-            .then(result => props.reviseToken(result.sessionToken))
+            .then(result => {
+                
+                props.reviseToken(result.sessionToken)
+                
+                console.log('sign up completed')
+
+                setUserSignUp(true);
+
+                history.push('/');
+                window.location.reload(true);
+            })
             .catch(error => console.log('error', error)); 
 
-        console.log('sign up completed')
+        
     }
+
+    let history = useHistory();
 
     return (
         <div >
