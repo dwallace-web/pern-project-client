@@ -10,7 +10,7 @@ const CreateAnswer = (props) => {
     const [submittedAnswer, setSubmittedAnswer] = useState(false);
     const [answerLiked, setAnswerLiked] = useState(false);
 
-    // const [ toggle, setToggle ] = useState(false);
+    
 
     const { buttonLabel, className } = props;
 
