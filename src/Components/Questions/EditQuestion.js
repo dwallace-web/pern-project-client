@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { Button, Form, FormGroup, Label, Input, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 
 import { Redirect, useHistory } from "react-router-dom";
+import API_URL from '../../environment';
 
 const EditQuestion = (props) => {
     console.log('edit question token -->', props.token)
@@ -19,7 +20,7 @@ const EditQuestion = (props) => {
     e.preventDefault();
     console.log(props);
     console.log('edit question ran', props.questionid)
-    fetch(`http://localhost:5000/question/${props.questionid}`, {
+    fetch(`${API_URL}/question/${props.questionid}`, {
         method: 'PUT',
         headers: new Headers({
             'Content-Type': 'application/json',

@@ -21,7 +21,7 @@ const ViewQuestion = (props) => {
         const fetchQuestions = (e) => {
             // e.preventDefault();
     
-            fetch("http://localhost:5000/question/", {
+            fetch(`${API_URL}/question/`, {
                 method: 'GET',
                 headers: new Headers({
                     'Content-Type': 'application/json',

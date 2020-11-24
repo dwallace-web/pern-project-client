@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
+import API_URL from '../../environment';
 const CreateQuestion = (props) => {
     console.log('question token -->', props.token)
 
@@ -11,7 +12,7 @@ const CreateQuestion = (props) => {
     const submitQuestion = (e) => {
         e.preventDefault();
 
-        fetch("http://localhost:5000/question/", {
+        fetch(`${API_URL}/question/`, {
             method: 'POST',
             headers: new Headers({
                 'Content-Type': 'application/json',
