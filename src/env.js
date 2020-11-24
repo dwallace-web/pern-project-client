@@ -6,7 +6,7 @@ switch(window.location.hostname){
         API_URL = 'http://localhost:5000';
         break;
     case 'q-a-app.herokuapp.com/':
-        API_URL = 'https://q-a-app-server.herokuapp.com/';
+        API_URL = 'https://q-a-app-server.herokuapp.com';
         break;
 }
 
