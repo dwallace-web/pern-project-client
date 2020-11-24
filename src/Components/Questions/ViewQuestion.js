@@ -1,5 +1,7 @@
 import React, { useState, EFf, useEffect } from 'react';
 import { } from 'reactstrap';
+import QuestionCard from './QuestionCard';
+//import Answer from '../Answers/Answer';
 
 const ViewQuestion = (props) => {
     console.log('VIEWING QUESTIONS', props)
