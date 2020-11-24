@@ -10,4 +10,6 @@ switch(window.location.hostname){
         break;
 }
 
+console.log('current api url is', API_URL);
+
 export default API_URL;
