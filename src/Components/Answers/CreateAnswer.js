@@ -47,16 +47,12 @@ const CreateAnswer = (props) => {
     }
 
 
-<<<<<<< HEAD
  return (
      <div>
          {
              submittedAnswer === true ? null:null
              
          }
-=======
-    return (
->>>>>>> 3fd2e36b33e9e05bf660960067a1d4c7db5542be
         <div>
             <Button class="question-button" onClick={toggle}>Create Answer </Button>
 
@@ -88,8 +84,7 @@ const CreateAnswer = (props) => {
             </Modal>
         </div>
 
-
-    )
+</div>    )
 }
 
         
