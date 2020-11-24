@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Button } from 'reactstrap';
-
-
+import API_URL from '../../env';
 
 
 const DeleteQuestion = (props) => {
@@ -15,7 +14,7 @@ const DeleteQuestion = (props) => {
         e.preventDefault();
         console.log(props);
         console.log('delete question ran', props.questionid)
-        fetch(`http://localhost:5000/question/delete/${props.questionid}`, {
+        fetch(`${API_URL}/question/delete/${props.questionid}`, {
             method: 'DELETE',
             headers: new Headers({
                 'Content-Type': 'application/json',

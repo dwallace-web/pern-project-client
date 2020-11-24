@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 import DisplayAnswers from './displayAnswers';
+import API_URL from '../../env';
+
 
 const ViewAnswer = (props) => {
 
@@ -22,7 +24,7 @@ const ViewAnswer = (props) => {
 
             console.log('Id in the get answer fetch', props.questionid)
 
-            fetch(`http://localhost:5000/answer/answers/${props.questionid}`, {
+            fetch(`${API_URL}/answer/answers/${props.questionid}`, {
                 method: 'GET',
                 headers: new Headers({
                     'Content-Type': 'application/json',
