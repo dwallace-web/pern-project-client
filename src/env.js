@@ -5,7 +5,7 @@ switch(window.location.hostname){
     case '127.0.0.1':
         API_URL = 'https://q-a-app-server.herokuapp.com';
         break;
-    case 'https://q-a-app.herokuapp.com/':
+    case 'https://q-a-app.herokuapp.com':
         API_URL = 'https://q-a-app-server.herokuapp.com';
         break;
 }
