@@ -12,7 +12,7 @@ export const SignUp = (props) => {
 
     async function signUpUser (event) {
         event.preventDefault();
-        console.log('sign up ran')
+        console.log('sign up ran', API_URL);
 
         await fetch(`${API_URL}/user/signup`, {
             method: 'POST',
