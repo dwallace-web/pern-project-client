@@ -2,6 +2,7 @@ import React, { useState, EFf, useEffect } from 'react';
 import Answer from '../Answers/Answer'  ; 
 import { } from 'reactstrap';
 import QuestionCard from './QuestionCard';
+import API_URL from '../../env';
 
 const ViewQuestion = (props) => {
     console.log('VIEWING QUESTIONS', props)
@@ -21,7 +22,7 @@ const ViewQuestion = (props) => {
         const fetchQuestions = (e) => {
             // e.preventDefault();
     
-            fetch("http://localhost:5000/question/", {
+            fetch(`${API_URL}/question/`, {
                 method: 'GET',
                 headers: new Headers({
                     'Content-Type': 'application/json',

@@ -4,6 +4,8 @@ import { Button, Form, FormGroup, Label, Input, Modal, ModalHeader, ModalBody, M
 
 import { Redirect, useHistory } from "react-router-dom";
 
+import API_URL from '../../env';
+
 const EditQuestion = (props) => {
     console.log('edit question token -->', props.token)
     const [questionTitle, setQuestionTitle] = useState('');
@@ -19,7 +21,7 @@ const EditQuestion = (props) => {
     e.preventDefault();
     console.log(props);
     console.log('edit question ran', props.questionid)
-    fetch(`http://localhost:5000/question/${props.questionid}`, {
+    fetch(`${API_URL}/question/${props.questionid}`, {
         method: 'PUT',
         headers: new Headers({
             'Content-Type': 'application/json',

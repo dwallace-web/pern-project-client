@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { Button, Form, FormGroup, Label, Input, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
+import API_URL from '../../env';
+
 
 const CreateAnswer = (props) => {
     console.log('answer token -->', props.token)
@@ -23,7 +25,7 @@ const CreateAnswer = (props) => {
         e.preventDefault();
 
         // console.log(props.questionid)
-        fetch('http://localhost:5000/answer/', {
+        fetch(`${API_URL}/answer/`, {
             method: 'POST',
             headers: new Headers({
                 'Content-Type': 'application/json',

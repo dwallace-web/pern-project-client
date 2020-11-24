@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { Form, FormGroup, Input, Button } from 'reactstrap'
 import { useHistory } from "react-router-dom";
+import API_URL from '../../env';
 
 export const SignUp = (props) => {
 
@@ -11,9 +12,9 @@ export const SignUp = (props) => {
 
     async function signUpUser (event) {
         event.preventDefault();
-        console.log('sign up ran')
+        console.log('sign up ran', API_URL);
 
-        await fetch("http://localhost:5000/user/signup", {
+        await fetch(`${API_URL}/user/signup`, {
             method: 'POST',
             headers: new Headers({
                 'Content-Type': 'application/json'

@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { Form, FormGroup, Input, Button } from 'reactstrap'
 import { Redirect, useHistory } from "react-router-dom";
+import API_URL from '../../env';
 
 
 
@@ -17,7 +18,7 @@ export const SignIn = (props) => {
         event.preventDefault();
         console.log('testing sign in ')
 
-        await fetch("http://localhost:5000/user/signin", {
+        await fetch(`${API_URL}/user/signin`, {
             method: 'POST',
             headers: new Headers({
                 'Content-Type': 'application/json'
