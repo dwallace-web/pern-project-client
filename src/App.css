@@ -23,13 +23,28 @@
   border: 2px solid black;
   padding: 2rem;
   margin: 3rem;
+  text-align: left;
 }
 .questioncard .question-button {
-  margin: 3rem;
+  position: relative;
+  margin-left: 100px;
   padding: 3rem;
+  width: 300px;
 }
 .current-module {
   /* align-content: center;
   margin: 0 auto; */
   
 }
+
+.jumbotron {
+  margin: 0 auto;
+  width: 100%;
+  text-align: center;
+}
+
+.questionButtonMenu {
+  display: flex;
+  justify-content: space-between;
+}
+

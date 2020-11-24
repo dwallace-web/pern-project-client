@@ -9,7 +9,11 @@ const ViewQuestion = (props) => {
     // console.log('question token -->', props.token)
 
     // const [submittedQuestion, setSubmittedQuestion] = useState(false);
-    
+
+    const [ questionRes, setQuestionRes ] = useState( [ ] );
+
+
+
     useEffect(() => {
 
         const fetchQuestions = (e) => {
@@ -24,20 +28,29 @@ const ViewQuestion = (props) => {
             })
                 .then(response => response.json())
                 .then(result => {
+
+                    setQuestionRes(result);
+
+                    console.log('set question res -->'. questionRes);
+
                     console.log('view questions---->', result)
 
+                    
+                    
                 })
                 .catch(error => console.log('error', error));
         }
     
         fetchQuestions();
 
+
     }, [])
    
 
     return (
         <div>
-            <h3>View Questions</h3>
+            <h3 className="current-module"></h3>
+            <QuestionCard questionRes={questionRes} token={props.token} />
         </div>
     )
 }

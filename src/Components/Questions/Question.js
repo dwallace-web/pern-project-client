@@ -3,6 +3,7 @@ import { Button } from 'reactstrap';
 import CreateQuestion from './CreateQuestion';
 import ViewQuestion from './ViewQuestion';
 
+
 const Question = (props) => {
     // console.log(props.token)
 
@@ -16,10 +17,10 @@ const Question = (props) => {
     }
 
     return (
-        <div>
-            <h2>Question</h2>
-
+        <div className="jumbotron">
+            
             {
+                
                 askQuestion === false
 
                     ?
@@ -31,6 +32,7 @@ const Question = (props) => {
                     :
 
                         <div>
+                        
                             <Button onClick={clickViewQuestions}>Do you want to view the questions? </Button>
                             <CreateQuestion token={props.token} />
                         </div>

@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from 'react'
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter, Collapse, CardBody, Card } from 'reactstrap';
 import CreateAnswer from '../Answers/CreateAnswer';
+import ViewAnswer from '../Answers/ViewAnswer';
+import EditQuestion from './EditQuestion';
+import DeleteQuestion from './DeleteQuestion'
 
 const QuestionCard = (props) => {
 
@@ -17,27 +20,31 @@ const QuestionCard = (props) => {
                 return (
 
                     <div key={question.id} className="questioncard">
-                        <h2>  {question.title} </h2>
-                        <h3>{question.category} </h3>
+                        <h5>Title:</h5>
+                        <h7>  {question.title} </h7>
+                        <h5>Category:</h5>
+                        <h7>{question.category} </h7>
+                        <h5>What seems to be the problem?</h5>
                         <p>{question.entry} </p>
-                        <CreateAnswer token={props.token} questionid={question.id} /> {/*toggle={toggle} */}
                         <br></br>
-                        <Button class="question-button">View Answers </Button>
-                        <br></br>
-                        <br></br>
-                        <Button class="question-button">Edit Question</Button>
-                        {/* <Button class="question-button">Delete Question </Button> */}
-
-
-
+                        <div className="questionButtonMenu">
+                            <CreateAnswer token={props.token} questionid={question.id} />
+                            <br></br>
+                            <ViewAnswer token={props.token} questionid={question.id} />
+                            <br></br>
+                            <br></br>
+                            <EditQuestion token={props.token} questionid={question.id} />
+                            <DeleteQuestion token={props.token} questionid={question.id} />
+                            {/* <Button class="question-button">Delete Question </Button> */}
+                        </div>
                     </div>
                 )
 
             }
             )
             }
-        </div>
-    )
-}
+                    </div>
+                )
+            }
 
 export default QuestionCard

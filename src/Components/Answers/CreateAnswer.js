@@ -10,7 +10,7 @@ const CreateAnswer = (props) => {
     const [submittedAnswer, setSubmittedAnswer] = useState(false);
     const [answerLiked, setAnswerLiked] = useState(false);
 
-    // const [ toggle, setToggle ] = useState(false);
+    
 
     const { buttonLabel, className } = props;
 
@@ -21,7 +21,8 @@ const CreateAnswer = (props) => {
 
     const submitAnswer = (e) => {
         e.preventDefault();
-        console.log(props.questionid)
+
+        // console.log(props.questionid)
         fetch('http://localhost:5000/answer/', {
             method: 'POST',
             headers: new Headers({
